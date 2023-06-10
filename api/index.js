@@ -203,6 +203,7 @@ ws_server.on('connection', (connection, req) => {
         const { recipient, text, file } = messageRecived;
         let newFileName = null;
         if (file) {
+            console.log(file);
             const ext = file.fileName.split('.').slice(-1);
             newFileName = Date.now() + '.' + ext[0];
             const filePath = __dirname + '/uploads/' + newFileName;
