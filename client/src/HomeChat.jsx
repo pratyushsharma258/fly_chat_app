@@ -90,7 +90,9 @@ function HomeChat() {
   function sendFiles(e) {
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
+    console.log(e.target.files[0]);
     reader.onload = () => {
+      console.log(reader.result);
       sendMessageText(null, {
         fileName: e.target.files[0].name,
         data: reader.result,
