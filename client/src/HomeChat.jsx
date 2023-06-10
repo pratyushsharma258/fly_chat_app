@@ -20,7 +20,7 @@ function HomeChat() {
   }, [selectedUser]);
 
   function connectToWebSocket() {
-    const ws = new WebSocket("ws://fly-chat.onrender.com");
+    const ws = new WebSocket("wss://fly-chat.onrender.com");
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {
