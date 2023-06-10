@@ -148,7 +148,7 @@ app.post('/register', async (req, res) => {
 const server = app.listen(4040);
 
 const ws_server = new wss.WebSocketServer({ server });
-;
+
 ws_server.on('connection', (connection, req) => {
 
     function notifyAboutOnlinePeople() {
@@ -206,7 +206,9 @@ ws_server.on('connection', (connection, req) => {
             const ext = file.fileName.split('.').slice(-1);
             newFileName = Date.now() + '.' + ext[0];
             const filePath = __dirname + '/uploads/' + newFileName;
+            console.log(file.data.split(',')[1]);
             const bufferData = new Buffer.from(file.data.split(',')[1], 'base64');
+            console.log(bufferData);
             fs.writeFile(filePath, bufferData, () => {
             })
         }
