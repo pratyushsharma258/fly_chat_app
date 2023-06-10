@@ -1,0 +1,15 @@
+{
+  "name": "Fly_Chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "cd api && yarn install",
+    "start-server": "cd api && nodemon app.js",
+    "install-client": "cd client && yarn install",
+    "build-client": "cd client && yarn run build",
+    "start-client": "cd client && yarn run start"
+  },
+  "repository": "https://github.com/pratyushsharma258/Fly_Chat_app.git",
+  "author": "PRATYUSH SHARMA <pratyushsharma258@gmail.com>",
+  "license": "MIT"
+}
