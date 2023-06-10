@@ -203,13 +203,10 @@ ws_server.on('connection', (connection, req) => {
         const { recipient, text, file } = messageRecived;
         let newFileName = null;
         if (file) {
-            console.log(file);
             const ext = file.fileName.split('.').slice(-1);
             newFileName = Date.now() + '.' + ext[0];
             const filePath = __dirname + '/uploads/' + newFileName;
-            console.log(file.data.split(',')[1]);
             const bufferData = new Buffer.from(file.data.split(',')[1], 'base64');
-            console.log(bufferData);
             fs.writeFile(filePath, bufferData, () => {
             })
         }
