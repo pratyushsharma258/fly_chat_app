@@ -294,7 +294,7 @@ function HomeChat() {
           <form className="flex gap-2" onSubmit={sendMessageText}>
             <input
               type="text"
-              className="bg-white placeholder-amber-700 border p-2 flex-grow rounded-sm"
+              className="bg-white placeholder-amber-700 border p-2 w-1/2 flex-grow rounded-sm"
               placeholder="Type a message"
               value={currentMessageContent}
               onChange={(e) => setCurrentMessageContent(e.target.value)}
