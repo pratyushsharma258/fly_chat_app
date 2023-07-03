@@ -117,6 +117,7 @@ function HomeChat() {
   }, [onlineUsers]);
 
   useEffect(() => {
+    setCurrentMessageContent("");
     if (selectedUser) {
       axios.get("/messages/" + selectedUser).then((res) => {
         const { data } = res;
